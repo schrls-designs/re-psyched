@@ -1,29 +1,55 @@
 //adapted from https://medium.com/@srivishnu.k90/add-dynamic-form-fields-with-html-and-pure-javascript-in-2-minutes-c4950e0a1717
 
 
-// WHERE!!!!!!!!!!
 const Nintendo = document.getElementById("Nintendo");
 const SEGA = document.getElementById("SEGA");
 const Sony = document.getElementById("Sony");
 const Microsoft = document.getElementById("Microsoft");
 
-//WHAAAAAAAAATTTT!!!!!!!!
-function NintendoChoice()
+const C21 = document.getElementById("C21");
+const C22 = document.getElementById("C22");
+const C23 = document.getElementById("C23");
+const C24 = document.getElementById("C24");
+
+const Q1 = document.getElementById("Question1");
+Q1.style.display = "none";
+
+const Q2 = document.getElementById("Question2");
+Q2.style.display = "none";
+
+let click = false;
+let click2 = false;
+
+function FirstChoice()
 {
-    let newChoices = document.createElement('input');
-    newChoices.setAttribute("class", "column");
-    newChoices.innerHTML = '<div class="checkcontainer" id="row"><label for="small"> Kind: </label> <input type="radio" class="checkbox" name="Kind" id="Kind1"><label for="small"> Kind: </label> <input type="radio" class="checkbox" name="Kind" id="Kind2"><label for="small"> Kind: </label> <input type="radio" class="checkbox" name="Kind"id="Kind3"><label for="small"> Kind: </label> <input type="radio" class="checkbox" name="Kind" id="Kind4"></div>';
-    document.getElementById('inRows').appendChild(newColumn);
+  if (click === false)
+  {
+     click = true;
+     Q1.style.display = "block";
+  }
+  else
+  {
+    click = false;
+    Q1.style.display = "none";
+  }
+  
+}
+Nintendo.addEventListener("click", FirstChoice);
+SEGA.addEventListener("click", FirstChoice);
+Sony.addEventListener("click", FirstChoice);
+Microsoft.addEventListener("click", FirstChoice);
+
+
+function SecondChoice()
+{
+     click2 = true;
+     Q2.style.display = "block";
 }
 
-function SEGAChoice()
-{
-
-}
-
-//WHEEEEENNNN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Nintendo.addEventListener("click", NintendoChoice);
-
+C21.addEventListener("click", SecondChoice);
+C22.addEventListener("click", SecondChoice);
+C23.addEventListener("click", SecondChoice);
+C24.addEventListener("click", SecondChoice);
 
 //where
 const imageChange = document.getElementById("image");
