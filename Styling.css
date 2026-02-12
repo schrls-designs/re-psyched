@@ -139,8 +139,8 @@ flex-shrink: 0;
 .imgcolumnsmall
 {
    margin: auto;
-   margin-top: -12rem;
-   margin-bottom: -13rem;
+   margin-top: -8rem;
+   margin-bottom: -10rem;
    width: 100%;
    height: inherit;
    scale: 50%   ;
@@ -318,6 +318,32 @@ header .logo a img:hover
 /* Example Animation code taken from https://codepen.io/sungaila/pen/LzMgjE */
 
 /* =============BUTTON STUFF=============== */
+
+.checkcontainer
+{
+    width: fit-content;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-basis: 100%;
+    scale:200%;
+    background-color: rgba(0, 0, 0, 0.103);
+    box-shadow: inset 0rem 0.2rem 0.4rem rgba(211, 241, 255, 0.4), inset 0rem -0.2rem 0.4rem rgba(21, 12, 46, 0.9), 0rem 0.2rem 0.1rem rgba(21, 12, 46, 0.9);
+    padding: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    white-space: wrap;
+}
+
+.checkcontainer .checkbox
+{
+
+    color: #fa3a00;
+    box-shadow: darkblue 0.1rem 0.1rem,  white -0.01rem -0.01rem;;
+    border-radius: 0%;
+}
 
 .submit
 {
@@ -595,6 +621,9 @@ footer
 @media screen and (min-width:1920px) 
 {
 
+
+
+
     .cliptext
 {
      padding: 3em 3% 0; /*padding changes dynamically to prevent overflow */
@@ -638,6 +667,14 @@ footer
 
 @media screen and (max-width:1024px) 
 {
+
+        .checkcontainer
+    {
+    flex-direction: column;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    }
+
     .scrolltext h2
     {
         scale: 0%

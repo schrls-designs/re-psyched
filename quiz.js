@@ -1,15 +1,28 @@
+//adapted from https://medium.com/@srivishnu.k90/add-dynamic-form-fields-with-html-and-pure-javascript-in-2-minutes-c4950e0a1717
+
 
 // WHERE!!!!!!!!!!
-const sectionOne = document.getElementById("dark-mode-id");
+const Nintendo = document.getElementById("Nintendo");
+const SEGA = document.getElementById("SEGA");
+const Sony = document.getElementById("Sony");
+const Microsoft = document.getElementById("Microsoft");
 
 //WHAAAAAAAAATTTT!!!!!!!!
-function toggleDarkMode()
+function NintendoChoice()
 {
-    sectionOne.classList.toggle("dark-mode");
+    let newChoices = document.createElement('input');
+    newChoices.setAttribute("class", "column");
+    newChoices.innerHTML = '<div class="checkcontainer" id="row"><label for="small"> Kind: </label> <input type="radio" class="checkbox" name="Kind" id="Kind1"><label for="small"> Kind: </label> <input type="radio" class="checkbox" name="Kind" id="Kind2"><label for="small"> Kind: </label> <input type="radio" class="checkbox" name="Kind"id="Kind3"><label for="small"> Kind: </label> <input type="radio" class="checkbox" name="Kind" id="Kind4"></div>';
+    document.getElementById('inRows').appendChild(newColumn);
+}
+
+function SEGAChoice()
+{
+
 }
 
 //WHEEEEENNNN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-sectionOne.addEventListener("click", toggleDarkMode);
+Nintendo.addEventListener("click", NintendoChoice);
 
 
 //where
