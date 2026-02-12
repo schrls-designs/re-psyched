@@ -2,6 +2,7 @@
 
 //where
 const themeText = document.getElementById("themetext"); //get an id within html file
+const randompage = document.getElementById("surpriseme"); //get an id within html file
 
 let themetostore = localStorage.getItem("currenttheme");
 
@@ -89,6 +90,20 @@ function toggleTheme()
 themeText.addEventListener("click", changeText); //string function, run function
 themeText.addEventListener("click", toggleTheme); //string function, run function
 
+
+//
+
+// RANDOM NUMBER GENERATOR
+
+let pagesArray = ["GuidePage.html", "InformationPage.html", "AboutPage.html", "QuizPage.html"];
+
+function randompagesender()
+{
+let randomNumber1 = Math.floor(Math.random() * 4); // random number between 0 and 4.
+document.getElementById("surpriseme").href = pagesArray[randomNumber1];
+console.log(pagesArray[randomNumber1]);
+}
+randompage.addEventListener("click", randompagesender); //string function, run function
 
 // WHERE!!!!!!!!!!
 const sectionOne = document.getElementById("dark-mode-id");
