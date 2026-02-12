@@ -1,0 +1,164 @@
+nav
+{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -0.5rem;
+    padding: auto;
+    padding-bottom: 0.5rem;
+    z-index: 1;
+}
+
+nav a 
+{
+    text-shadow: 1px 2px #0200244b;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+.container 
+{
+  display: flex; 
+
+  flex-direction: row-reverse;
+
+  flex-wrap: nowrap;
+
+  width: 100%;
+
+  justify-content: space-between;
+
+  align-items: stretch;
+
+  position: sticky;
+
+  top: 0;
+}
+
+nav a
+{
+    flex-basis: 10%;
+
+    flex-grow: 1;
+
+    min-width: fit-content;
+
+    white-space: nowrap;
+
+    align-self: auto;
+    
+    transition: all 0.5s ease-in-out;
+
+    margin: 0.2rem;
+}
+
+nav a:hover
+{
+ flex-basis: 30%;
+ flex-grow: 0;
+
+ color: rgb(255, 255, 255);
+ text-shadow: 5px 5px #3700ff4b;
+}
+
+/* ID of currentpage makes the current page appear selected by default */
+
+nav #currentpage
+{
+ flex-basis: 30%;
+ flex-grow: 0;
+ color: rgb(255, 255, 255);
+ text-shadow: 5px 5px #3700ff4b;
+}
+
+/* Child of hover, currentpage, is shrunk back to normal when selecting another page */
+
+nav:hover #currentpage 
+{
+    flex-basis: 20%;
+    flex-grow: 0;
+}
+
+/* Keeps the current page growth consistent, essentially undoing the shrinking behaviour */
+
+nav #currentpage:hover 
+{
+    flex-basis: 30%;
+    flex-grow: 0;
+}
+
+nav a p
+{
+    text-align: center;
+    padding: 0.2rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.navflair
+{
+    position:absolute;
+    scale: 4%;
+    top:0;
+    margin-top: -52.5rem;
+    right: -78.8rem;
+
+    z-index: -10;
+
+    filter: drop-shadow(3rem 10rem 0rem rgba(0, 0, 0, 0.5)) ;
+
+}
+
+
+@media screen and (max-width:768px) 
+{
+    .container
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: inherit;
+    }
+
+    nav > a
+    {
+        padding: 0;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        min-width: fit-content;
+        flex-basis: 40%;
+        flex-grow: 2;
+    }
+
+    nav a:hover
+    {
+
+    flex-basis: 60%;
+    flex-grow: 5;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px #3700ff4b;
+
+    }
+
+    nav #currentpage
+    {
+     flex-basis: 30%;
+     flex-grow: 1;
+     color: rgb(255, 255, 255);
+     text-shadow: 5px 5px #3700ff4b;
+    }
+
+    nav:hover #currentpage 
+    {
+    flex-basis: 20%;
+    flex-grow: 1;
+    }
+
+    nav #currentpage:hover 
+    {
+    flex-basis: 30%;
+    flex-grow: 1;
+    }
+
+    
+}

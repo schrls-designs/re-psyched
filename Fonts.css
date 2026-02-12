@@ -1,0 +1,120 @@
+.headingfont
+{
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 3rem;
+}
+
+.bodyfont
+{
+  font-family: "Cuprum", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.themetext
+{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2.5rem;
+}
+
+.imgcontainer .caption
+{
+  font-size: 2rem;
+  text-wrap: nowrap;
+}
+
+.column .buttons p
+{
+    font-size: 3vh;
+}
+
+nav a p:hover
+{
+    font-size: 1.9rem;
+}
+
+h1
+{
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+h2
+{
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 550;
+  font-style:italic;
+  font-size: 1.6rem;
+  padding: 0.25rem;
+}
+
+h3, h4, h5, h6
+{
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.2rem;
+  padding: 0.1rem;
+}
+
+p
+{
+    padding: auto;
+    padding-bottom: 1rem;
+}
+
+body
+{
+  font-family: "Cuprum", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 1rem;
+}
+
+nav, .buttons a
+{
+  font-family: "Zen Dots", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+@media screen and (max-width:600px) 
+{
+  
+    h1, h2, h3, h4, h5, h6
+    {
+        font-size: 1.5rem;
+        word-wrap: auto;
+    }
+
+    .buttons a
+    {
+    font-family: "Zen Dots", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 1rem;
+    font-style: italic;
+    }
+    
+    .imgcontainer .caption
+    {
+        font-size: 0.85rem;
+        text-wrap: nowrap;
+    }
+
+    .subtitle
+    {
+      font-size: 1.2rem;
+    }
+}
